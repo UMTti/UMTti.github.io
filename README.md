@@ -1,1 +1,1 @@
-Rails-kurssi 
+Rails-kurssi Päivölän matematiikkalinjan kesään
