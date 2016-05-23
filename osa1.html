@@ -46,13 +46,35 @@
           <p>HTTP-pyyntöjä on useita erilaisia. Yleisimmät HTTP-pyynnöt ovat GET ja POST. GET-pyyntö on tarkoitettu sivun hakemiseen serveriltä, POST taas tiedon lähetykseen serverille. HTTP-pyyntöjen erilaisuuden selittämiseen voi käyttää vertausta postin toiminnasta. POST-pyyntö on kuin postipaketti, joka sisältää tietoa tai asioita ja joka toimitetaan vastaanottajalle niin että hän voi sitä käyttää. GET-pyyntö on taas kuin kuriiri, joka käy pyytämässä esimerkiksi http://google.com -sivua, ja saa vastaukseksi HTML-sivun. </p>
 
           </br>
-          <h3>Tehtävä: </3> Lataa <a href="https://www.getpostman.com/">Postman-sovellus.</a> Postman on kuin tekstiselain, eli sillä pystyy havainnollistamaan HTTP-pyyntöjen toimintaa. Tee Postmanilla GET-pyyntö johonkin osoitteeseen ja katso millainen vastaus on. Sen jälkeen tee POST-pyyntö osoitteeseen http://httpbin.org/post. Httpbin on testiserveri, joka palauttaa POSTilla lähettämäsi datan sinulle. Lisää Postmanin Body-kohdasta jokin Key ja Value, lähetä ja katso mitä palautetaan vastauksena. Huomaa myös Postmanin valikosta, kuinka paljon erilaisia HTTP-pyyntöjä onkaan olemassa.
+          <h3>Tehtävä: </3> Lataa <a href="https://www.getpostman.com/">Postman-sovellus.</a> Postman on kuin tekstiselain, eli sillä pystyy havainnollistamaan HTTP-pyyntöjen toimintaa. Tee Postmanilla GET-pyyntö johonkin osoitteeseen ja katso millainen vastaus on. Sen jälkeen tee POST-pyyntö osoitteeseen http://httpbin.org/post. Httpbin on testiserveri, joka palauttaa POSTilla lähettämäsi datan sinulle. Serveri saa itse kuitenkin aina määritellä, mitä se palauttaa POST-pyyntöön. Lisää Postmanin Body-kohdasta jokin Key ja Value, lähetä ja katso mitä palautetaan vastauksena. Huomaa myös Postmanin valikosta, kuinka paljon erilaisia HTTP-pyyntöjä onkaan olemassa.
         </div>
 
         </br>
         <h3> Web-ohjelmoinnin työkalut </h3></br>
 
-        <p>Tee Postmanilla GET-pyyntö osoitteeseen http://google.com. Se palauttaa HTML-tiedoston. Huomaat, että HTML-tiedostoilla on tietty rakenne. Etsi sivulta script -tagi ja katso millaista koodia sen jälkeen tulee. Se on JavaScriptiä, ja se suoritetaan käyttäjän selaimessa. JavaScript on eri asia kuin Java, ja sitä käytetään selaimen toiminnallisuuksiin sovelluksissa. Tutustu nyt <a href="http://jqueryui.com/">JQuery-UI:n </a> demoihin, niin saat jonkinlaista kuvaa siitä, mihin JavaScriptiä käytetään ohjelmoinnissa.</p>
+        <h3> HTML </h3> </br>
+
+        <p>Tee Postmanilla GET-pyyntö osoitteeseen http://google.com. Se palauttaa HTML-tiedoston. Huomaat, että HTML-tiedostoilla on tietty rakenne. Ne koostuvat tageista ja niiden sisällä olevista tageista ja teksteistä. 
+
+        </br> </br>
+        <h3>JavaScript</h3> </br>
+
+        Etsi sivulta script -tagi ja katso millaista koodia sen jälkeen tulee. Se on JavaScriptiä, ja se suoritetaan käyttäjän selaimessa. JavaScript on eri asia kuin Java, ja sitä käytetään selaimen toiminnallisuuksiin sovelluksissa. Tutustu nyt <a href="http://jqueryui.com/">JQuery-UI:n </a> demoihin, niin saat jonkinlaista kuvaa siitä, mihin JavaScriptiä käytetään ohjelmoinnissa. JQuery on JavaScript-kirjasto.  Pääset itse käyttämään JQueryä myöhemmin tällä kurssilla. </p> </br>
+
+        <h3>CSS </h3> </br>
+
+        <p>CSS eli Cascading Style Sheets on taas tarkoitettu sivujen tyylittämiseen. Tutustumme lisää CSS:ään kurssin osassa 6. Esimerkiksi tämän kurssisivuston tekstit ja värit on saatu aikaan CSS:llä. Sivuston CSS on usein määritelty omassa .css -tiedostossaan. CSS-koodilla voidaan määritellä jokaiselle HTML-tagille oma tyyli, esimerkiksi tekstin ja taustan väri sekä fontti. Esimerkiksi seuraava koodi tyylittää h1-tagin (iso otsikko) niin että sen tekstin väri on oranssi ja teksti on keskitetty sivun keskelle. 
+        </p>
+
+        </br>
+        <code>  
+
+        h1 {
+          color: orange;
+          text-align: center;
+        }
+        </code>
+        </p>
     </div>
     </div>
     </div>
