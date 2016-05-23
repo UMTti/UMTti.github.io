@@ -7,7 +7,7 @@
 
 # Site settings
 title: PVL-RAILS
-email: your-email@domain.com
+email: pihla.toivanen@cs.helsinki.fi
 description: > # this means to ignore newlines until "baseurl:"
   Ruby On Rails-kurssi Päivölän Matematiikkalinjalaisille. 
 baseurl: "" # the subpath of your site, e.g. /blog
