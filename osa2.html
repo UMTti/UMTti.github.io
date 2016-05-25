@@ -61,6 +61,28 @@
           rails g scaffold User name:string 
           </code> </br> </br>
 
+          Sen jälkeen komennolla 
+
+          </br> </br>
+          <code>
+          rake db:migrate
+          </code> </br> </br>
+          ajetaan tietokantamigraatiot eli se luo User-taulun tietokantaamme. Sen jälkeen lisää config/routes.rb -tiedostoon rivi joka asettaa kaikki käyttäjät listaavan sivun juureksi: 
+
+          </br> </br>
+          <code>
+          root 'users#index'
+          </code> </br> </br>
+
+          Nyt kun käynnistät sovelluksen chat-hakemistosta komennolla 
+
+            </br> </br>
+          <code>
+          rails s
+          </code> </br> </br>
+
+          niin osoitteessa localhost:3000 sinulla pitäisi olla sovellus. 
+
          </div>
     </div>
     </div>
