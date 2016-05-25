@@ -44,6 +44,23 @@
          Tämän jälkeen asenna jokin tekstieditori, mieluiten sellainen jolla on helppo käsitellä useita tiedostoja samaan aikaan, esimerkiksi <a href="https://www.sublimetext.com/"> Sublime Text </a>. Avaa kotihakemistoosi ilmestynyt chat -kansio tekstieditorilla. Huomaat että sinne on generoitu paljon erilaisia kansioita ja tiedostoja. Rails perustuu tiedostojen automaattigeneroinnille niin, että itse ohjelmointi olisi mahdollisimman helppoa. Tässä vaiheessa ei ole tärkeää tietää jokaisen tiedoston merkitystä, sillä tutustumme jokaiseen tarpeelliseen osaan kerrallaan. 
           </p>    
 
+          </br>
+          <h1> Model-View-Controller -malli </h1>
+
+          <img src="toinenkuva.png" /> 
+
+          <p>Rails perustuu Model-View-Controller- eli MVC-malliin. Modelit ovat olioluokkia, .rb-päätteisiä ruby-luokkia. Tässä materiaalissa oletetaan että olet tutustunut jo esimerkiksi Javan olioihin. Railsin Modeleiden oliot tallennetaan tietokantaan automaattisesti ActiveRecord -nimisen systeemin kautta. Activerecord siis yhdistää tietokannan rivit olioiksi niin, ettei ohjelmoijan tarvitse kirjoittaa monimutkaisia SQL-lauseita. Riittää kun osaa käyttää olioita.</p>
+          </br>
+          <p>Controllerit huolehtivat tiedonkulusta Modeleiden ja Viewien välillä. Modelit ja Viewit kun ovat täysin erilaisia asioita, Modelit luokkia ja Viewit .html.erb -tiedostoja. Html-erb-päätteinen tiedosto on html-tiedosto, jonka sisällä on <% %> -tageissa Ruby-koodia. </p>
+
+          </br>
+          Luodaan ensimmäinen model, controller ja view kaikki yhdellä kertaa kirjoittamalla chat-hakemistossa komentorivillä 
+          
+          </br> </br>
+          <code>
+          rails g scaffold User name:string 
+          </code> </br> </br>
+
          </div>
     </div>
     </div>
