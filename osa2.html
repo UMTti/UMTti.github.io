@@ -129,7 +129,76 @@
           </br>
           <h1>Sovellus nettiin</h1>
 
+          <p>Ennen sovelluksen nettiin laittamista täytyy määritellä tuotantotietokannaksi Postgresql. Vaihda Gemfile-tiedoston rivi </p>
 
+           </br> 
+          <code>
+          gem 'sqlite3'
+          </code> </br> </br>
+
+          <p> riveiksi </p>
+
+          </br> 
+          <code>
+          group :development, :test do  </br> 
+            &nbsp gem 'sqlite3'  </br> 
+          end  </br> 
+
+          group :production do  </br> 
+            &nbsp gem 'pg'  </br> 
+          end
+          </code> </br> </br>
+
+
+
+          <p> Siirrämme sovelluksen nyt nettiin Heroku-palveluun. Luo Herokuun tunnus <a href="https://signup.heroku.com/">täältä</a>. Asenna Heroku Toolbelt eli Herokun komentorivikäyttöliittymä <a href="https://toolbelt.heroku.com/">täältä</a>. Kirjaudu ohjeen mukaisesti sisään. Luo Heroku-sovellus chat-hakemistossasi seuraavalla komennolla muuttaen pihlanchatti-nimen haluamaksesi:  </p>
+
+          </br>
+
+           <img src="herokucreate.png"/> 
+
+           </br></br>
+
+          <p>Seuraava teksti olettaa että sinulla on versionhallintajärjestelmä <a href="https://git-scm.com/">Git</a> asennettuna. Alustetaan tyhjä Git-repositorio chat-hakemistossa komennolla </p>
+
+          </br> 
+          <code>
+          git init
+          </code> </br> </br>
+
+          Sen jälkeen asetetaan Git-repositoriomme etärepositorioksi Herokun kertoma repositorio, minun tapauksessani siis 
+
+          </br> </br> 
+          <code>
+          git remote add heroku https://git.heroku.com/pihlanchatti.git
+          </code> </br> </br>
+
+          <div style="border: 1px solid red;padding:7px;">
+
+          <b style="color:red;">Toistuvat Git-komennot</b> </br></br>
+
+          <p>Koko sovellus pushataan Herokun git-remoteen seuraavilla komennoilla: </p>
+
+
+          </br> 
+          <code>
+          git add -A   </br>
+          git commit -am "kuvaus commitista" </br>
+          git push heroku master
+          </code> </br> </br>
+
+          </div>
+
+          </br>
+
+          Se ei kuitenkaan vielä toimi koska Herokussa pitää vielä ajaa tietokantamigraatiot komennolla 
+
+          </br></br>
+          <code>
+          heroku run rake db:migrate
+          </code> </br> </br>
+
+          <p>Nyt sovelluksesi löytyy siis osoitteesta jonka Heroku ilmoitti ylläolevan kuvan mukaan sitä luodessasi.</p>
 
          </div>
     </div>
