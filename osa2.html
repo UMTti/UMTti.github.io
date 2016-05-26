@@ -86,6 +86,47 @@
           <b> Tehtävä: Tutki sovellustasi selaimessa, erityisesti Useriin liittyviä toiminnallisuuksia. Scaffold-komento nimittäin loi esimerkiksi mahdollisuuden luoda uusi käyttäjä, näyttää sen tiedot sekä tuhota käyttäjä. Testaa sovellustasi. </b> </br>
 </br>
           <h1>Palataan vielä tutkimaan Useriin liittyvää generoitua koodia</h1>
+          <p>Model tiedostossa app/models/user.rb on tyhjä luokka. Se kuitenkin perii ActiveRecord::Base -luokan eli sen käytössä on esimerkiksi konstruktori ja attribuuttien setterit ja getterit, jotka hakevat ja asettavat arvoja suoraan tietokantaan. Kokeillaan näitä ominaisuuksia Railsin komentoriviltä </p>
+
+
+            </br> 
+          <code>
+          rails c
+          </code> </br> </br>
+
+          <p>Luodaan uusi User Railsin komentorivillä komennolla </p>
+
+
+            </br> 
+          <code>
+          u = User.new name:"nimi"
+          </code> </br> </br>
+
+          <p>Huomataan että tämä ei anna u:lle id:tä ja komentorivi kertoo sen id:n olevan nil. Id on luku, joka annetaan jokaiselle tietokantaan talletettavalle oliolle, ja saman luokan toisella oliolla ei saa olla samaa id:tä. Id:tä käytetään myöhemmin olion tietoja tietokannasta haettaessa. U saa id:n vasta kun se tallennetaan tietokantaan komennolla </p>
+
+
+            </br> 
+          <code>
+          u.save!
+          </code> </br> </br>
+
+          <p>Nyt saamme tietää u:n id:n komennolla  </p>
+
+            </br> 
+          <code>
+          u.id
+          </code> </br> </br>
+
+          <p>Uuden olion luonnin ja tallettamisen tietokantaan voi tehdä helpomminkin. Komento </p>
+
+           </br> 
+          <code>
+          u = User.create name:"nimi"
+          </code> </br> </br>
+
+          <p>luo uuden Userin jonka nimi on nimi, ja tallettaa sen tietokantaan. Nyt tarkista vielä u:n id, se pitäisi olla yhtä suurempi kuin aiemman olion id.  </p>
+
+
 
          </div>
     </div>
