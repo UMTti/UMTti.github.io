@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>PVL-Rails</title>
+<link href="css/styles.css" rel="stylesheet" type="text/css" />
+<link href='http://fonts.googleapis.com/css?family=Lobster+Two' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Pontano+Sans' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<div class="header-wrap">
+  <div class="header">
+    <div class="logo">
+      <h1>PVL-Rails</h1>
+    </div>
+    <div class="menu">
+      <ul>
+        <li><a href="index.html" class="active">Aloitus</a></li>
+        <li><a href="osa1.html">1. Tutustutaan web-ohjelmointiin </a></li>
+        <li><a href="osa2.html">2. Tutustutaan Railsiin</a></li>
+        <li><a href="osa3.html">3. Käyttäjätunnukset ja salasanat</a></li>
+        <li><a href="work.html">4. Sivut hienoiksi CSS:llä</a></li>
+        <li><a href="work.html">5. Reaaliaika-chat</a></li>
+        <li><a href="work.html">6. Web-sovellusten tietoturvasta</a></li>
+        <li><a href="contact.html">7. Ohjeita tulevaan   </a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="page  mar-top30">
+  <div class="primary-col">
+    <div class="generic bdr-bottom-none">
+      <div class="panel" style="color:black;">
+        <div class="title">
+          <h1>Käyttäjätunnukset ja salasanat</h1>
+          <h2>Tässä osassa liitämme käyttäjätunnuksiin salasanan ja luomme kirjautumisjärjestelmän. </h2>
+          <h1>Liitetään käyttäjään salasana</h1>
+        </div>
+           <p>Salasanoja ei tallenneta tietokantaan selväkielisinä. Tavallista on, että salasanasta generoidaan yksisuuntainen hash eli tiiviste. Tiivisteestä ei pysty päättelemään salasanaa, mutta samasta salasanasta algoritmi generoi aina samanlaisen tiivisteen ja näin voidaan kirjautuessa tarkistaa, onko käyttäjän antama salasana oikea salasana.  Otamme käyttöön <a href="https://github.com/codahale/bcrypt-ruby">BCrypt-kirjaston</a> turvallisen salasanajärjestelmän luomiseen. Lisää Gemfileen</br></br>
+         <code>
+         gem 'bcrypt', '~> 3.1.7'
+         </code> </br></br>
+         ja aja
+         </br>
+         </br>
+         <code>
+         bundle install
+         </code> </br></br>
+         <p>Käyttäjään pitää lisätä password_digest-attribuutti, johon tiiviste sitten tallentuu tietokantaan. Tehdään se komennolla</p></br>
+         <code>
+         rails g migration AddPasswordDigestToUser password_digest:string
+         </code> </br></br>
+         Sen jälkeen User-model tulee saada näyttämään tältä, has_secure_password-metodin kutsumisen lisäys liittyy BCryptin toimintaan. Has_secure_password lisää User-olioon password ja password_confirmation-kentät. Jos näiden arvot eivät ole samat, Userin tallennus tietokantaan ei tule onnistumaan.</br></br>
+         <img src="usermodel.png" /> </br></br>
+         Ajetaan lopuksi tietokantamigraatiot komennolla 
+         </br></br>
+         <code>
+         rails g migration AddPasswordDigestToUser password_digest:string
+         </code> </br></br>
+    </div>
+    </div>
+    </div>
+
