@@ -64,6 +64,11 @@
          <img src="user_formi.png"/>
          </br></br>
 
+         UsersControllerin user_params-metodiin täytyy lisätä sallittaviksi parametreiksi password ja password_confirmation seuraavalla tavalla: 
+         </br></br>
+         <img src="user_params.png"/>
+         </br></br>
+
          <h1>Toteutetaan kirjautuminen</h1>
          <h1>Keskustelukysymys: Millä tavalla toteuttaisit kirjautumisen nykyisen osaamisesi perusteella? </h1>
          <h2>Toteutamme kirjautumisen sessioiden avulla. Yksi sessio-muuttujaan määritetty arvopari on yksi selaimen eväste (cookie). Käyttäjän kirjautuessa onnistuneesti sisään hänen yksilöllinen käyttäjä-ID tallennetaan sessioon. Uloskirjautuessa se poistetaan sessiosta. Railsin sessio-muuttujan arvot on oletuksena salattu niin, että käyttäjä-ID:tä ei pysty feikkaamalla asettamaan sessiomuuttujaksi sovelluksen ulkopuolelta esimerkiksi selaimesta evästeitä muokkaamalla.</h2>
