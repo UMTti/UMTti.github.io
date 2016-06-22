@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>PVL-Rails</title>
+<link href="css/styles.css" rel="stylesheet" type="text/css" />
+<link href='http://fonts.googleapis.com/css?family=Lobster+Two' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Pontano+Sans' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<div class="header-wrap">
+  <div class="header">
+    <div class="logo">
+      <h1>PVL-Rails</h1>
+    </div>
+    <div class="menu">
+      <ul>
+        <li><a href="index.html" class="active">Aloitus</a></li>
+        <li><a href="osa1.html">1. Tutustutaan web-ohjelmointiin </a></li>
+        <li><a href="osa2.html">2. Tutustutaan Railsiin</a></li>
+        <li><a href="osa3.html">3. Käyttäjätunnukset ja salasanat</a></li>
+        <li><a href="osa4.html">4. Sivut hienoiksi CSS:llä</a></li>
+        <li><a href="osa5.html">5. Reaaliaika-chat</a></li>
+        <li><a href="work.html">6. Web-sovellusten tietoturvasta</a></li>
+        <li><a href="contact.html">7. Ohjeita tulevaan   </a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="page  mar-top30">
+  <div class="primary-col">
+    <div class="generic bdr-bottom-none">
+      <div class="panel" style="color:black;">
+        <div class="title">
+          <h1>Reaaliaika-chat</h1>
+          <h2>Tässä osassa tulee paljon uutta asiaa. Koodaamme reaaliaikaisen chatin jossa kaksi käyttäjää pystyvät keskustelemaan keskenään. Luomme Conversation- ja Message- mallit. Niiden ja käyttäjän välille täytyy luoda sopivat tietokantayhteydet. Sen jälkeen koodataan controllereihin ja vieweihin viestien lähetyksen ja lukemisen toiminnallisuudet.   </h2> 
+          <img src="brightedkaavio.jpg" width="400" heigth="400"/> </br></br>
+          Täytyy siis koodata mahdollisuudet siihen, että </br>
+          <b>1) Käyttäjä voi kuulua useampaan keskusteluun ja keskustelulla voi olla kaksi käyttäjää</b> </br>
+
+          <b>2) Keskusteluun kuuluu monta viestiä, mutta yksi viesti voi kuulua vain yhteen keskusteluun. </b> </br></br>
+
+          <h1> Luodaan mallit Conversation ja Message sekä yhteydet </h1>
+
+          Luodaan ensin scaffoldaamalla Conversation. </br>
+
+         </br>
+         <code>
+         rails g scaffold Conversation
+         </code> </br></br>
+
+         Aja migraatiot</br></br>
+
+         <h1> Keskustelukysymykset: Millä komennolla ajat migraatiot? Mitä sen jälkeen kannattaa alkaa tekemään? </h1>
+
+         <h1> Luodaan yhteys käyttäjän ja Conversationin välille </h1>
+
+         Lue <a href="http://shilpi2189.blogspot.fi/2013/01/implementing-hasandbelongstomany.html"> tutoriaali</a> Eli siis, ensimmäinen askel on lisätä app/models/user.rb-tiedostoon 
+
+         </br></br>
+         <code>
+         has_and_belongs_to_many :conversations
+         </code> </br></br> 
+
+         Sen jälkeen app/models/conversation.rb -tiedostoon 
+
+         </br></br>
+         <code>
+         has_and_belongs_to_many :users
+         </code> </br></br> 
+
+         Tämä ei vielä riitä. Rails on siitä hyvä että voimme tehdä paljon asioita ymmärtämättä tietokantatauluista erityisemmin. Nyt kyllä pitäisi ymmärtää mitä olemme seuraavaksi tekemässä. Haluamme luoda seuraavanlaisen tietokantataulun
+
+         </br></br>
+         <img src="brighted.jpg" height="400"/> </br>
+
+         komennolla 
+
+         </br></br>
+         <code>
+         rails g migration CreateConversationsUsers conversation_id:integer user_id:integer
+         </code> </br></br> 
+         
+         ConversationsUsers on taulu, joka yhdistää Conversationit ja Userit. Jokaisella Conversationilla ja Userilla on oma yksilöllinen numero-ID. 
+
+         <h1> Keskustelukysymys: Mitä kuvassa tapahtuu? </h1>
+
+
+    </div>
+    </div>
