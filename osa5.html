@@ -20,7 +20,7 @@
         <li><a href="osa2.html">2. Tutustutaan Railsiin</a></li>
         <li><a href="osa3.html">3. Käyttäjätunnukset ja salasanat</a></li>
         <li><a href="osa4.html">4. Sivut hienoiksi CSS:llä</a></li>
-        <li><a href="osa5.html">5. Reaaliaika-chat</a></li>
+        <li><a href="osa5.html">5. Viestien lähetys</a></li>
         <li><a href="work.html">6. Web-sovellusten tietoturvasta</a></li>
         <li><a href="contact.html">7. Ohjeita tulevaan   </a></li>
       </ul>
@@ -111,7 +111,7 @@
 
          </br></br>
          <code>
-         rails g scaffold Message user_id:integer conversation_id:integer
+         rails g scaffold Message user_id:integer conversation_id:integer content:string
          </code> </br></br> 
 
          Lisätään message.rb -modeliin 
@@ -140,6 +140,18 @@
          <h1>Keskustelukysymys: Mitä send_message_for_user -funktion sisällöksi tulee?</h1>
          Ota mallia <a href="https://github.com/nyymiapp/nyymi/blob/master/app/controllers/messages_controller.rb">Nyymi-softan</a> viestienlähetyksestä, esimerkiksi create- tai send_message_for_company -funktioista. 
 
+         </br></br>
+
+         <h1>Saapuneiden viestien näyttäminen kirjautuneelle käyttäjälle</h1>
+
+         Tarkista ensin, että viestien lähetys toimii. Saat sen helpoiten selville kirjoittamalla rails c - konsoliin 
+
+         </br></br>
+         <code>
+         Message.all
+         </code> </br></br>
+
+         Se listaa kaikki Message-oliot ja niiden attribuutit.  
 
     </div>
     </div>
