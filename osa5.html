@@ -101,7 +101,7 @@
 
         <h1>Keskustelukysymys: Mitä <a href="https://github.com/UMTti/chat/blob/0266847cf8c1e195c9207df5527481ee128e8e8a/app/views/users/show.html.erb">tämä</a> tekee? </h1>
 
-        Kun olet sisäistänyt täydellisesti mitä linkin koodi tekee, ota se users/show.html.erb-viewin pohjaksi. Luodaan seuraavaksi Message-malli ja koodataan MessagesControlleriin pyynnön käsittelevä funktio. 
+        Kun olet sisäistänyt täydellisesti mitä linkin koodi tekee, ota se users/show.html.erb-viewin pohjaksi. Vaihda rivien 18 ja 24 user_id receiver_id:ksi. Luodaan seuraavaksi Message-malli ja koodataan MessagesControlleriin pyynnön käsittelevä funktio. 
 
         </br></br>
 
@@ -111,7 +111,7 @@
 
          </br></br>
          <code>
-         rails g scaffold Message user_id:integer conversation_id:integer content:string
+         rails g scaffold Message user_id:integer conversation_id:integer content:string receiver_id:integer
          </code> </br></br> 
 
          Lisätään message.rb -modeliin 
@@ -122,7 +122,7 @@
          belongs_to :conversation
          </code> </br></br>
 
-         ja user.rb- sekä conversation.rb-modeleihin  
+         ja user.rb- modeliin 
 
          </br></br>
          <code>
@@ -151,7 +151,12 @@
          Message.all
          </code> </br></br>
 
-         Se listaa kaikki Message-oliot ja niiden attribuutit.  
+         Se listaa kaikki Message-oliot ja niiden attribuutit. Tehdään käyttäjän omalle sivulle saapuneiden viestien näyttäminen. 
+
+         Lisää </br></br>
+
+         <img src="viestit.png" /> </br> </br>
+         sopivaan kohtaan users/show.html.erb -tiedostoon.
 
     </div>
     </div>
