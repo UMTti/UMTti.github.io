@@ -39,6 +39,13 @@
           <h1> Keskustelukysymys: Mikä on Cross Site Request Forgery? Miten sen voi estää ohjelmiston kehitysvaiheessa? </h1> 
 
           <h1>Validoidaan käyttäjän nimen uniikkius ja asetetaan salasanan tietoturvallisuudelle vaatimuksia</h1>
+
+          Käyttäjänimen tulee olla uniikki ja sen pituuden täytyy olla vähintään 1 merkki. Railsissa tietokantaobjektien attribuuteille voi antaa vaatimuksia modeleissa. Lisää user.rb -tiedostoon 
+
+         </br></br>
+         <code>
+         validates :name, uniqueness: true, length: { minimum: 1 }
+         </code> </br></br>
           
 
     </div>
