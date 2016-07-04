@@ -73,7 +73,33 @@
          Tämä ei vielä riitä. Rails on siitä hyvä että voimme tehdä paljon asioita ymmärtämättä tietokantatauluista erityisemmin. Nyt kyllä pitäisi ymmärtää mitä olemme seuraavaksi tekemässä. Haluamme luoda seuraavanlaisen tietokantataulun
 
          </br></br>
-         <img src="brighted.jpg" height="400"/> </br>
+         
+<style>
+.dbtaulu {
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+.dbtaulu caption, .dbtaulu td, .dbtaulu th {
+  padding: 5pt;
+  text-align: center;
+}
+.dbtaulu td, .dbtaulu th {
+  border: 1px solid black;
+    width: 50%;
+}
+</style>
+
+<div>
+<table class="dbtaulu">
+<caption>ConversationUsers</caption>
+<tr><th>user_id</th><th>conversation_id</th></tr>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td></tr>
+<tr><td>1</td><td>2</td></tr>
+<tr><td>3</td><td>2</td></tr>
+</table>
+</div>
+
 
          komennolla 
 
