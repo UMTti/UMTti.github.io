@@ -64,6 +64,8 @@
          <img src="user_formi.png"/>
          </br></br>
 
+         Jos et jaksa kirjoittaa tuota niin voit myös kopioida formin koodin <a href="https://github.com/UMTti/chat/blob/master/app/views/users/_form.html.erb"> täältä </a>. </br></br>
+
          UsersControllerin user_params-metodiin täytyy lisätä sallittaviksi parametreiksi password ja password_confirmation seuraavalla tavalla: 
          </br></br>
          <img src="user_params.png"/>
@@ -85,7 +87,7 @@
          </code> </br></br>
          <p>Luodaan seuraavaksi IstuntosController tiedostoon app/controllers/istuntos_controller.rb </p></br>
          <img src="istuntoscontroller.png"/> </br></br>
-         Create-metodi ei ole vielä valmis. Siihen täytyy toteuttaa salasanan tarkistus ja sen perusteella joko sisäänkirjautumisen hyväksyminen tai hylkääminen. Tehdään ensin kuitenkin valmiiksi kirjautumisview. Lisää tiedosto app/views/istuntos/new.html.erb-tiedosto (vaatii istuntos-kansion luonnin ensin). Koodaa sen sisällöksi 
+         Create-metodi ei ole vielä valmis. Siihen täytyy toteuttaa salasanan tarkistus ja sen perusteella joko sisäänkirjautumisen hyväksyminen tai hylkääminen. Tehdään ensin kuitenkin valmiiksi kirjautumisview. Lisää tiedosto app/views/istuntos/new.html.erb-tiedosto (vaatii istuntos-kansion luonnin ensin). Koodaa sen sisällöksi, jos et jaksa koodata niin kopioi <a href="https://github.com/UMTti/chat/blob/master/app/views/istuntos/new.html.erb">täältä</a>. Kirjautumissivu tulee osoitteeseen localhost:3000/istunto/new 
 
          </br></br>
          <img src="istunto_formi.png" />
