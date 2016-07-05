@@ -103,32 +103,32 @@
 
             </br> 
           <code>
-          u = User.new name:"nimi"
+          user1 = User.new name:"nimi"
           </code> </br> </br>
 
-          <p>Huomataan että tämä ei anna u:lle id:tä ja komentorivi kertoo sen id:n olevan nil. Id on luku, joka annetaan jokaiselle tietokantaan talletettavalle oliolle, ja saman luokan toisella oliolla ei saa olla samaa id:tä. Id:tä käytetään myöhemmin olion tietoja tietokannasta haettaessa. U saa id:n vasta kun se tallennetaan tietokantaan komennolla </p>
+          <p>Huomataan että tämä ei anna user1:ille id:tä ja komentorivi kertoo sen id:n olevan nil. Id on luku, joka annetaan jokaiselle tietokantaan talletettavalle oliolle, ja saman luokan toisella oliolla ei saa olla samaa id:tä. Id:tä käytetään myöhemmin olion tietoja tietokannasta haettaessa. User1 saa id:n vasta kun se tallennetaan tietokantaan komennolla </p>
 
 
             </br> 
           <code>
-          u.save!
+          user1.save!
           </code> </br> </br>
 
           <p>Nyt saamme tietää u:n id:n komennolla  </p>
 
             </br> 
           <code>
-          u.id
+          user1.id
           </code> </br> </br>
 
           <p>Uuden olion luonnin ja tallettamisen tietokantaan voi tehdä helpomminkin. Komento </p>
 
            </br> 
           <code>
-          us = User.create name:"nimi2"
+          user2 = User.create name:"nimi2"
           </code> </br> </br>
 
-          <p>luo uuden Userin jonka nimi on nimi2, ja tallettaa sen tietokantaan. Nyt tarkista vielä us:n id, se pitäisi olla yhtä suurempi kuin aiemman talletetun olion id.  </p>
+          <p>luo uuden Userin jonka nimi on nimi2, ja tallettaa sen tietokantaan. Nyt tarkista vielä user2:n id, se pitäisi olla yhtä suurempi kuin aiemman talletetun olion id.  </p>
 
           </br>
           <h1>Sovellus nettiin</h1>
